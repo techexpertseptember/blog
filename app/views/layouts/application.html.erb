@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ja="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+     <div class="header__bar row">
+      <% if user_signed_in? %>
+        <div class="user_nav grid-6">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </div>
+      <% else %>
+        <div class="grid-6">
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+        </div>
+      <% end %>
+    </div>
+</head>
+<body class='<%= controller.controller_name %>'>
+<div id="wrap">
+
+  <header id="header">
+    <div class="inner">
+      <h1 id="logo"><%= link_to "Sample My Blog", root_path %></h1>
+      <p id="catchcopy">Description or something ....</p>
+    </div><!-- /.inner -->
+  </header><!-- /#header -->
+
+  <div id="main">
+    <%= yield %>
+  </div><!-- /#main -->
+  
+</div><!-- /#wrap -->
+</body>
+</html>
