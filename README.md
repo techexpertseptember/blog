@@ -5,20 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## 簡単な説明
+多機能タスク管理リスト
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能
+ 
+タスク投稿・削除・編集・確認可
+電卓、おみくじ機能搭載
+ 
+投稿時にカレンダー表示日付選択と入力可（未実装）

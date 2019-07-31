@@ -2,7 +2,7 @@
 <html ja="ja">
 <head>
   <meta charset="utf-8" />
-  <title>Blog</title>
+  <title>To Do List</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,12 +10,39 @@
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <form><input type="button" value="今日の運勢" onClick="omikuji()"></form>
+
+<script type="text/javascript">          
+function omikuji() {
+	rand = Math.floor(Math.random()*100);
+	msg = "大吉"; //0～9（10%）
+	if (rand > 9) msg = "中吉"; //10～29（20%）
+	if (rand > 29) msg = "吉"; //30～69（40%）
+	if (rand > 69) msg = "凶"; //70～89（20%）
+	if (rand > 89) msg = "大凶"; //90～99（10%）
+	alert(msg);
+}
+
+</script>
         </div>
       <% else %>
         <div class="grid-6">
           <%= link_to "ログイン", new_user_session_path, class: 'post' %>
           <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
         </div>
+        <form><input type="button" value="おみくじ" onClick="omikuji()"></form>
+
+<script type="text/javascript">          
+function omikuji() {
+	rand = Math.floor(Math.random()*100);
+	msg = "大吉"; //0～9（10%）
+	if (rand > 9) msg = "中吉"; //10～29（20%）
+	if (rand > 29) msg = "吉"; //30～69（40%）
+	if (rand > 69) msg = "凶"; //70～89（20%）
+	if (rand > 89) msg = "大凶"; //90～99（10%）
+	alert(msg);
+}
+</script>
       <% end %>
     </div>
 </head>
@@ -24,9 +51,11 @@
 
   <header id="header">
     <div class="inner">
-      <h1 id="logo"><%= link_to "Sample My Blog", root_path %></h1>
-      <p id="catchcopy">Description or something ....</p>
+      <h1 id="logo"><%= link_to "To Do List", root_path %></h1>
+      <p id="catchcopy">....</p>
     </div><!-- /.inner -->
+
+    
   </header><!-- /#header -->
 
   <div id="main">

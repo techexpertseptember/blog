@@ -1,8 +1,8 @@
-<h1>全ての投稿一覧</h1>
+<h1>⭐🍃</h1>
 
 <table>
   <tr>
-    <th>タイトル</th>
+    <th>期限</th>
     <th>内容</th>
   </tr>
 
@@ -16,8 +16,8 @@
       <% if user_signed_in? %>
       <td><%= link_to '詳細', post %></td>
       <td><%= link_to '編集', edit_post_path(post) %></td>
-       <td><%= link_to '削除', post_path(post),
-                method: :delete, data: { confirm: '削除しますか？' } %></td>
+       <td><%= link_to '完了', post_path(post),
+                method: :delete, data: { confirm: '🍃タスク完了🍃' } %></td>
  <% end %>
     </tr>
 
@@ -33,4 +33,6 @@
 
 
 </table>
-<%= link_to '新しい投稿', new_post_path %>
+<%= link_to '追加', new_post_path %>
+
+

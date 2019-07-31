@@ -1,2 +1,139 @@
-<h1>✧*。٩(ˊωˋ*)و✧*。 </h1>
-<%= link_to "blog", controller: "posts" %>
+<h1>🍃</h1>
+<%= link_to "リストへ", controller: "posts" %>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>でんたく!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    #calcForm {
+      max-width: 480px;
+    }
+  </style>
+
+  
+</head>
+<body>
+
+</nav>
+  
+  
+  <section class="section">
+    <div class="container">
+      
+      
+<form name="form" id="calcForm">
+    
+    <div class="field">
+      <div class="control">
+        <input type="text" class="input has-text-right" name="text" value="0">
+      </div>
+    </div>
+      
+    <div class="columns is-mobile">
+      <div class="column">
+        <input type="button" class="button is-danger is-fullwidth" value="C" onClick="calc('C')">
+      </div>
+      <div class="column">
+        <a class="button is-fullwidth"></a>
+      </div>
+      <div class="column">
+        <a class="button is-fullwidth"></a>
+      </div>
+      <div class="column">
+        <input type="button" class="button is-info is-fullwidth" value="+" onClick="calc('+')">
+      </div>
+    </div>
+    
+      
+    <div class="columns is-mobile">
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="7" onClick="calc('7')">
+      </div>
+      <div class="column">
+       <input type="button" class="button is-primary is-fullwidth" value="8" onClick="calc('8')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="9" onClick="calc('9')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-info is-fullwidth" value="-" onClick="calc('-')">
+      </div>
+    </div>
+   
+    <div class="columns is-mobile">
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="4" onClick="calc('4')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="5" onClick="calc('5')">
+      </div>
+      <div class="column">  
+        <input type="button" class="button is-primary is-fullwidth" value="6" onClick="calc('6')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-info is-fullwidth" value="×" onClick="calc('*')">
+      </div>
+    </div>
+      
+    <div class="columns is-mobile">
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="1" onClick="calc('1')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="2" onClick="calc('2')">   
+      </div>
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="3" onClick="calc('3')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-info is-fullwidth" value="÷" onClick="calc('/')">
+      </div>
+    </div>
+     
+    <div class="columns is-mobile">
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="0" onClick="calc('0')">
+      </div>
+      <div class="column">
+        <input type="button" class="button is-primary is-fullwidth" value="." onClick="calc('.')">
+      </div>
+      <div class="column is-half">
+        <input type="button" class="button is-success is-fullwidth" value="=" onClick="calc('=')">
+      </div>
+    </div> 
+      
+      
+  
+</form>    
+      
+      </div>
+    </section>
+  
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        ♥｡･ﾟ🍃
+      </p>
+    </div>
+  </footer>
+
+  <script>    
+function calc(cmd) {
+  if (cmd == "=") {
+    document.form.text.value = eval(document.form.text.value);
+  } else if (cmd == "C") {
+    document.form.text.value = "";
+  } else {
+    document.form.text.value += cmd;
+  }
+}
+  </script>
+
+</body>
+</html>
+
+
